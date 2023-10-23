@@ -4,13 +4,17 @@ import { TaskContext } from '../context/TaskContext'
 import { useNavigate } from 'react-router-dom';
 import { type } from '../types/type';
 import { TaskListItems } from '../components/TaskListItems';
+import { AuthContext } from '../context/AuthContext';
+import { Navigate } from 'react-router-dom';
 
 export const Tasks = () => {
 
-    const { state, dispatch } = useContext(TaskContext);
-
     const navigate = useNavigate()
+    const {isLogged} = useContext(AuthContext)
+    
+    if(!isLogged) return (<Navigate to={'/login'} />)
 
+    const { state, dispatch } = useContext(TaskContext);
     const eliminarTarea = (id) => {
         dispatch({
             type: type.TASK_DELETE,

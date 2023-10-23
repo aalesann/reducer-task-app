@@ -8,6 +8,7 @@ import {
 import { Tasks } from '../pages/Tasks';
 import { TaskEdit } from '../pages/TaskEdit';
 import { TaskAdd } from '../pages/TaskAdd';
+import { Login } from '../pages/Login';
 
 export const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ export const AppRouter = () => {
 
         
         <Route path='/' element={ <Tasks /> } />
+        <Route path='/login' element={ <Login /> } />
 
         <Route path='/task/edit/:id' element={ <TaskEdit /> } />
         <Route path='/task/add' element={ <TaskAdd /> } />
