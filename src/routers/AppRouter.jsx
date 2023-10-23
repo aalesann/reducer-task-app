@@ -4,16 +4,21 @@ import {
     Routes,
     Route
  } from 'react-router-dom';
-import App from '../App';
-import { Tasks } from '../Tasks';
+
+import { Tasks } from '../pages/Tasks';
+import { TaskEdit } from '../pages/TaskEdit';
+import { TaskAdd } from '../pages/TaskAdd';
 
 export const AppRouter = () => {
   return (
     <BrowserRouter>
         <Routes>
 
-        <Route path='/' element={ <App /> } />
-        <Route path='/task2' element={ <Tasks /> } />
+        
+        <Route path='/' element={ <Tasks /> } />
+
+        <Route path='/task/edit/:id' element={ <TaskEdit /> } />
+        <Route path='/task/add' element={ <TaskAdd /> } />
     
     
         </Routes>

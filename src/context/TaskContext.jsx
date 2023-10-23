@@ -6,7 +6,7 @@ import { type } from "../types/type";
 export const TaskContext = createContext();
 
 const init = () => {
-    return JSON.parse(localStorage.getItem('tasks')) || [];
+    return JSON.parse(localStorage.getItem('todoList')) || [];
 }
 
 export const Contexto = ({ children }) => {

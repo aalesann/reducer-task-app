@@ -21,6 +21,19 @@ export const taskReducer = (state, action) => {
                 } else {
                   return item;
                 }})
+        case type.TASK_UPDATE:
+                return state.map(task => {
+
+                  if(task.id == action.payload.id){
+                    task = {
+                      ...task,
+                      ...action.payload
+                    }
+                    return task;
+                  }
+
+                  return task;
+                })
         default:
             return state;
     }

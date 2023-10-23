@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 
 import { useState } from 'react';
-import { type } from './types/type';
-import { TaskContext } from './context/TaskContext';
+import { type } from '../types/type';
+import { TaskContext } from '../context/TaskContext';
 
 
 
